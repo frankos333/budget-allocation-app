@@ -11,28 +11,33 @@ Welcome to the Budget Allocator App! This application is designed to help you ma
 
 ## Installation
 
-To get started with the Budget Allocator App, follow these simple steps:
+### To get started with the Budget Allocator App, follow these simple steps:
 
-1. Clone the repository:
+#### 1. Clone the repository:
 
-git clone https://github.com/yourusername/budget-allocator-app.git
+``` 
+ git clone https://github.com/yourusername/budget-allocator-app.git 
+```
 
-2. Navigate to the project directory:
+#### 2. Navigate to the project directory:
 
+```
 cd budget-allocator-app
+```
 
-markdown
-Copy code
+#### 3. Install dependencies:
 
-3. Install dependencies:
-
+````markdown 
 npm install
+````
 
-4. Start the development server:
+#### 4. Start the development server:
 
+```
 npm start
+```
 
-5. Open your web browser and navigate to `http://localhost:3000` to access the application.
+#### 5. Open your web browser and navigate to `http://localhost:3000` to access the application.
 
 ## Technologies Used
 
