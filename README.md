@@ -21,6 +21,9 @@ git clone https://github.com/yourusername/budget-allocator-app.git
 
 cd budget-allocator-app
 
+markdown
+Copy code
+
 3. Install dependencies:
 
 npm install
