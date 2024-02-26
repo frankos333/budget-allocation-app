@@ -13,12 +13,12 @@ const TabTwo: React.FC = () => {
   );
   const months = MONTHS;
   return (
-    <Container p={0} m={0}>
+    <Container p={0} m={0} w="100%">
       <Heading fontSize={16} color="gray.600" mb={5}>
         Edit your manual allocation channels:
       </Heading>
       {manualChannels.map((channel) => (
-        <Flex w="100%" h={130}>
+        <Flex h={130} w="100%">
           <Box
             py={6}
             px={8}
@@ -37,16 +37,24 @@ const TabTwo: React.FC = () => {
               </Flex>
             </Flex>
           </Box>
-          {months.map((label, idx) => {
-            return (
-              <MonthlyBudgetInput
-                key={idx}
-                label={label}
-                idx={idx}
-                channel={channel}
-              />
-            );
-          })}
+          <Flex
+            overflowX="auto"
+            whiteSpace="nowrap"
+            minW="calc(100vw - 356px)"
+            scrollBehavior={"smooth"}
+            className="scrollbar-tiny"
+          >
+            {months.map((label, idx) => {
+              return (
+                <MonthlyBudgetInput
+                  key={idx}
+                  label={label}
+                  idx={idx}
+                  channel={channel}
+                />
+              );
+            })}
+          </Flex>
         </Flex>
       ))}
     </Container>

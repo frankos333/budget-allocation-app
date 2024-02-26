@@ -27,7 +27,7 @@ const MonthlyBudgetInput: React.FC<{
   const { onMonthlyBudgetChange } = useContext(ChannelsContext);
 
   function onSave(idx: number, value: number) {
-    onMonthlyBudgetChange(idx, value);
+    onMonthlyBudgetChange(idx, value, channel.id);
     setIsEditMode(false);
   }
 
@@ -75,7 +75,7 @@ const MonthlyBudgetInput: React.FC<{
             <NumberInput
               value={`$ ${monthlyBudget.toLocaleString()}`}
               onChange={(val) => setMonthlyBudget(+val)}
-              mt={10}
+              mt={6}
             >
               <NumberInputField
                 p={2}

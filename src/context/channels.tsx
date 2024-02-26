@@ -14,7 +14,7 @@ export type ContextInterface = {
 
   setSelectedChannel: (channel: string | null) => void;
   onBudgetAllocationChange: (budgetAllocation: BudgetAllocation) => void;
-  onMonthlyBudgetChange: (month: number, value: number) => void;
+  onMonthlyBudgetChange: (month: number, value: number, chanelId?: string) => void;
   onBaselineBudgetChange: (value: number) => void;
   onBudgetFrequencyChange: (budgetFrequency: BudgetFrequency) => void;
   onDeleteChannel: (channelId: string) => void;
@@ -38,8 +38,8 @@ const ChannelsProvider: React.FC<ProviderProps> = ({ children }) => {
     return onBaselineBudgetChange(0, budgetAllocation);
   }
 
-  function onMonthlyBudgetChange(month: number, value: number) {
-    const channelId = activeChannel!.id;
+  function onMonthlyBudgetChange(month: number, value: number, chanelId?: string) {
+    const channelId = activeChannel?.id || chanelId;
     const updatedChannels = channels.map((channel) => {
       if (channel.id !== channelId) {
         return channel;
